@@ -1,7 +1,16 @@
 import pytest
 
-from main import *
+from farm import app
 
-def test_addition():
-    assert addition(1,2) == 3
-    assert addition(5,6) == 11
+
+@pytest.fixture
+def client():
+    client = app.test_client()
+    return client
+
+
+def test_index(client):
+    response = client.get("/")
+
+    assert response.status_code == 200
+    assert response.data == b"Hello, world!"
