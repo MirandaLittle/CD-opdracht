@@ -1,6 +1,6 @@
 ls
 cat main.py
 git pull
-systemctl restart first-project
-systemctl status first-project
+systemctl restart farm
+systemctl status farm
 pwd 
