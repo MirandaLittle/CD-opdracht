@@ -1,6 +1,6 @@
 name: Run Tests and Deploy
 
-on: workflow_dispatch
+on: push
 jobs:
   run-tests:
     runs-on: ubuntu-20.04
